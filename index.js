@@ -96,7 +96,7 @@ const setWeather = async () => {
           <div id="weather-main">
             <div id="weather-info">
               <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
-              <h1 id="weather-temp">${data?.main?.temp}º</h1>
+              <h1 id="weather-temp">${Math.floor(data?.main?.temp)}º</h1>
             </div>
             <div id="weather-name">
               <h1>${data?.name}</h1>
