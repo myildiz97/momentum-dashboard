@@ -1,0 +1,98 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 0px 20px #aaaaaa;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#time {
+  align-self: center;
+  margin: 0;
+  font-size: 5rem;
+}
+
+#author {
+  font-size: 1.25rem;
+  margin: 0 0 10px 10px;
+}
+
+#crypto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+}
+
+#crypto-header {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#crypto-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#crypto-info h3 {
+  margin: 5px 0;
+}
+
+#weather-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 20px 0 0;
+}
+
+#weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#weather-info img {
+  width: 100px;
+  margin-right: -20px;
+}
+
+#weather-name h2 {
+  margin: 0;
+}
+
+#weather-name {
+  margin: -30px 0 0 30px;
+}
