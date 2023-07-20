@@ -53,7 +53,7 @@ const setCoin = async () => {
         <h3>Max in 24hrs: $${coin?.market_data?.high_24h?.usd}</h3>
         <h3>Min in 24hrs: $${coin?.market_data?.low_24h?.usd}</h3>
       ` : ""}
-    `
+    `;
   } catch (error) {
     console.error(error);
   }
@@ -67,11 +67,11 @@ const getTime = () => {
 const setTime = () => {
   const time = getTime();
   document.getElementById("time").textContent = time;
-}
+};
 
 const getWeather = async (lat, lon) => {
   try {
-    const baseURL = "https://apis.scrimba.com/openweathermap/data/2.5/weather?"
+    const baseURL = "https://apis.scrimba.com/openweathermap/data/2.5/weather?";
     const res = await fetch(`${baseURL}lat=${lat}&lon=${lon}&units=metric`);
     const data = await res.json();
     if (!data.message) {
@@ -103,19 +103,16 @@ const setWeather = async () => {
             </div>
           </div>
         `;
-      }
+      };
     });
   } catch (error) {
     console.error(error);
   }
-}
+};
 
 await setImage();
 await setCoin();
 await setWeather();
 setTime();
 
-setInterval(setImage, 300000);
-setInterval(setCoin, 600000);
-setInterval(setWeather, 1800000);
 setInterval(setTime, 1000);
