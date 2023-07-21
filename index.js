@@ -71,8 +71,9 @@ const setTime = () => {
 
 const getWeather = async (lat, lon) => {
   try {
-    const baseURL = "https://apis.scrimba.com/openweathermap/data/2.5/weather?";
-    const res = await fetch(`${baseURL}lat=${lat}&lon=${lon}&units=metric`);
+    const baseURL = "https://api.openweathermap.org/data/2.5/weather?";
+    const api = "35f0c3e9d785fd8d1aa205baabc071ee";
+    const res = await fetch(`${baseURL}lat=${lat}&lon=${lon}&units=metric&appid=${api}`);
     const data = await res.json();
     if (!data.message) {
       return data;
